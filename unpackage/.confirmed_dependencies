@@ -1,0 +1,74 @@
+{
+  "index.html": {
+    "resources": [
+      "@/js/app/index.js",
+      "@/js/lib/jquery/jquery-1.11.0.js",
+      "@/js/lib/fjp.js",
+      "@/fonts/mui.ttf",
+      "list.html",
+      "@/css/mui.min.css",
+      "@/js/mui.min.js",
+      "@/iconfont/iconfont.woff",
+      "@/iconfont/iconfont.css",
+      "@/css/index.css"
+    ],
+    "refer": [
+      "list.html",
+      "menu.html",
+      "about.html"
+    ]
+  },
+  "list.html": {
+    "resources": [
+      "@/js/lib/data.js",
+      "@/js/app/list.js",
+      "@/js/lib/jquery/jquery-1.11.0.js",
+      "@/js/lib/fjp.js",
+      "@/css/mui.min.css",
+      "@/js/mui.min.js",
+      "@/fonts/mui.ttf",
+      "@/js/lib/data1.js",
+      "@/iconfont/iconfont.woff",
+      "@/iconfont/iconfont.css",
+      "@/js/lib/vinjs.js",
+      "@/js/lib/angular.js",
+      "@/js/lib/bm.js",
+      "@/js/lib/angular-messages.min.js",
+      "@/js/lib/common.js",
+      "@/iconfont/iconfont.ttf",
+      "img/index/a (1).jpg",
+      "img/index/a (4).jpg",
+      "img/index/a (2).jpg",
+      "img/index/a (3).jpg",
+      "img/index/a (5).JPG",
+      "@/css/list.css"
+    ]
+  },
+  "menu.html": {
+    "resources": [
+      "@/js/app/menu.js",
+      "@/js/lib/data1.js",
+      "list.html",
+      "img/48x48.png",
+      "@/js/lib/jquery/jquery-1.11.0.js",
+      "@/js/lib/fjp.js",
+      "@/css/mui.min.css",
+      "@/js/mui.min.js",
+      "@/fonts/mui.ttf"
+    ],
+    "refer": [
+      "list.html"
+    ]
+  },
+  "about.html": {
+    "resources": [
+      "img/fjp.jpg",
+      "@/js/lib/jquery/jquery-1.11.0.js",
+      "@/js/lib/fjp.js",
+      "img/48x48.png",
+      "@/css/mui.min.css",
+      "@/js/mui.min.js",
+      "img/fjp1.jpg"
+    ]
+  }
+}

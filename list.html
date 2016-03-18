@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+<script src="@/js/mui.min.js"></script>
+    <link href="@/css/mui.min.css" rel="stylesheet"/>
+ <link rel="stylesheet" href="@/iconfont/iconfont.css">
+
+ 	<style>
+ 		.iconfont{
+     			font-size: 20px;
+     		}
+     		.mui-weishu:before{
+     			content: "7位";
+     		}  
+     		.mui-weishu.mui-active:before{
+     			content: "8位";
+     		}
+     		.mui-xishu:before{
+     			content: "1.33";
+     		}  
+     		.mui-xishu.mui-active:before{
+     			content: "1";
+     		}
+     		.resultitle{
+     			width: 80px;
+    display: block;
+    float: left;
+     		}
+     		.mui-col{
+    margin-right: -4px;
+    display: inline-block;
+}
+.vinvalid{
+	    position: relative;
+	        clear: left;
+    overflow: hidden;
+    padding-left: 30px;
+}
+.vinvalid label{
+
+    font-family: 'Helvetica Neue',Helvetica,sans-serif;
+    line-height: 1.1;
+    float: left;
+    padding: 11px 5px 11px 5px;
+    color:#A9A9A9;
+
+}
+.mui-input-group .vinvalid:after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 15px;
+    height: 1px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: #c8c7cc;
+}
+
+
+
+.input-result{
+	color: #F7C26F;
+	font-weight: bold;
+}
+.mui-content-padded{
+	padding-bottom: 45px;
+}
+.vinjs p{
+text-indent:2em;
+margin:0 auto；
+}
+.vinjs .titleVin{
+font-weight: bold;
+
+
+
+}
+.nf{
+	margin:0 auto；
+	
+	text-align: center;
+}
+.nf ,.nf td,.nf th{
+	border: 1px solid #999999;
+	text-align: center;padding: 2px 3px;
+	color:#C8C7CC;
+}
+.gz_title{
+	font-weight: bold;
+	color: #7DD1B7;
+}
+.gz_sx label{
+	font-weight: bold;
+	color:#7C8895;
+}
+.gz_sx span,.gz_sx .value{
+	color:#7DD1B7;
+}
+.input-title{
+	font-weight: bold;
+	color:#7DD1B7;
+}
+ 	</style>
+</head>
+<body>
+	
+    <div class="mui-content-padded"  ng-app="myApp" >
+	<div id="tabbar-index" class="mui-control-content mui-active">
+
+<div id="slider" class="mui-slider">
+	<div class="mui-slider-group mui-slider-loop">
+		<div class="mui-slider-item mui-slider-item-duplicate">
+			<a href="#">
+				<img src="img/index/a (2).jpg">
+			</a>
+			<p class="mui-slider-title">
+				这是核导弹第二方队通过天安门广场
+			</p>
+		</div>
+		<div class="mui-slider-item">
+			<a href="#">
+				<img src="img/index/a (3).jpg">
+			</a>
+			<p class="mui-slider-title">
+				装备保障方队接受检阅
+			</p>
+		</div>
+		<div class="mui-slider-item">
+			<a href="#">
+				<img src="img/index/a (4).jpg">
+			</a>
+			<p class="mui-slider-title">
+				装备保障方队通过天安门广场
+			</p>
+		</div>
+		<div class="mui-slider-item">
+			<a href="#">
+				<img src="img/index/a (5).JPG">
+			</a>
+			<p class="mui-slider-title">
+				后勤保障方队第一排4辆SX2190N运水车
+			</p>
+		</div>
+		<div class="mui-slider-item">
+			<a href="#">
+				<img src="img/index/a (2).jpg">
+			</a>
+			<p class="mui-slider-title">
+				这是核导弹第二方队通过天安门广场
+			</p>
+		</div>
+		<div class="mui-slider-item mui-slider-item-duplicate">
+			<a href="#">
+				<img src="img/index/a (3).jpg">
+			</a>
+			<p class="mui-slider-title">
+				装备保障方队接受检阅
+			</p>
+		</div>
+	</div>
+	<div class="mui-slider-indicator mui-text-right">
+		<div class="mui-indicator mui-active"></div>
+		<div class="mui-indicator"></div>
+		<div class="mui-indicator"></div>
+		<div class="mui-indicator"></div>
+	</div>
+</div>
+		<!--功能介绍-->
+		<div class="mui-card" style="margin: 15px 0 15px 0;">
+	<ul class="mui-table-view">
+					<li class="mui-table-view-cell mui-collapse mui-active">
+						<a class="mui-navigate-right" href="#">故障码介绍</a>
+						<div class="mui-collapse-content vinjs">
+							<p>汽车故障码就是汽车出现故障后经汽车电脑ECU分析反映出的故障码。</p>
+							<p>本应用汽车故障码即为SPN值和FMI值，在本应用中使用SPN值和FMI值查询故障信息。</p>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="#">K值、拨码介绍</a>
+						<div class="mui-collapse-content" vinjs>
+							<p>K值(每Km脉冲)的计算公式为：K=(8×10^6×桥速比)/(变速器一级传动比×Pi×轮胎直径),其中“10^6”指10的6次方，Pi是圆周率，取3.1415926，计算结果保留整数，小数位四舍五入。</p>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="#">车辆识别代码（VIN码）简介</a>
+						<div class="mui-collapse-content vinjs">
+							<p>车辆识别代码（VIN），VIN是英文Vehicle Identification Number（车辆识别码）的缩写。因为ASE标准规定：VIN码由17位字符组成，所以俗称十七位码。正确解读VIN码，对于我们正确地识别车型，以致进行正确地诊断和维修都是十分重要的。</p>
+							<p>车辆识别代码就是汽车的身份证号，它根据国家车辆管理标准确定，包含了车辆的生产厂家、年代、车型、车身型式及代码、发动机代码及组装地点等信息。新的行驶证在“车架号”一栏一般都打印VIN码。</p>
+							<p class="titleVin">代码说明</p>
+							<p>一、1～3位（WMI）：世界制造厂识别代号:在世界范围内陕汽厂的编号为“LZG”</p>
+							<p>二、4～8位（VDS）：车辆特征：</p>
+							<p>载货车：型号或种类、系列、底盘、驾驶室类型、发动机类型、制动系统及车辆额定总重；</p>
+							
+							<p>三、第9位：校验位，按标准加权计算（参见《世界汽车识别代号（VIN）资料手册》P21～23）。</p>
+							<p>四、第10位：车型年款</p>
+							<p><table class="nf">
+								<tr>
+									<th>年份</th>
+									<th>代码</th>
+									<th>年份</th>
+									<th>代码</th>
+									
+								</tr>
+								<tr>
+									<td>2016</td>
+									<td>G</td>
+									<td>2017</td>
+									<td>H</td>	
+								</tr>
+									<tr>
+									<td>2018</td>
+									<td>J</td>
+									<td>2019</td>
+									<td>K</td>	
+								</tr>
+									<tr>
+									<td>2020</td>
+									<td>L</td>
+									<td>2021</td>
+									<td>M</td>	
+								</tr>
+							</table>
+							</p>
+							<p>五、第11位：装配厂，若无装配厂，制造厂可规定其他的内容。特种车为“G”,总装厂为“X”</p>
+							<p>六、12～17位：生产序列号。</p>
+						</div>
+					</li>
+				</ul>	
+				
+	</div>
+		
+		
+	</div>
+	<div id="tabbar-gzhang" class="mui-control-content" ng-controller="gzmCtrl">
+    <form class="mui-input-group" name="gzmForm"  novalidate>
+<div class="mui-input-row gz_sx">
+			<label>SPN</label>
+			<input id="SPN" name="SPN" type="number" ng-model="SPN" class="mui-input-clear" placeholder="请输入故障代码" required>
+		
+		</div>
+		<div class="mui-input-row gz_sx">
+			<label>FMI</label>
+			<input id="FMI" name="FMI" type="number"  ng-model="FMI" class="mui-input-clear" placeholder="请输入FMI码" required>
+		</div>
+		<div class="mui-button-row">
+		    <button class="mui-btn mui-btn-success" ng-click="gzm()">确认</button>&nbsp;&nbsp;
+			<button class="mui-btn mui-btn-warning" ng-click="cClear()">取消</button>
+		</div>
+	<ul class="mui-table-view">
+			<li class="mui-table-view-cell">
+				<label class="gz_title">查询结果:</label>
+			</li>
+			<li class="mui-table-view-cell gz_sx" ng-repeat="rs in gz">
+
+				<label>所属系统：<span ng-bind='rs.system'></span></label><br/>
+				<label>故障描述：<span ng-bind='rs.description'></span></label><br/>	
+				<label>所属总成: <span ng-bind='rs.classify'></span></label>
+			</li>
+			<li class="mui-table-view-cell" ng-show="have">
+
+				<label >没有数据！</label>
+			</li>
+			<textarea id="gz" ng-bind="gzVal" rows="3" style="display:none"></textarea>
+			<li class="mui-table-view-cell" ng-show="n">
+				
+				<div class="mui-button-row">
+				<button class="mui-btn mui-btn-success mui-btn-block" onclick="shareSystem('gz')">
+						<span class="mui-icon mui-icon-weixin"></span>
+						发送查询结果
+					</button>
+			
+			</div>
+				
+
+			</li>
+
+		</ul>
+		
+		</form>
+	</div>
+<div id="tabbar-k" class="mui-control-content" ng-controller="kCtrl">
+	<!--k值计算-->
+	<form name="kForm" class="mui-input-group" novalidate>
+
+		<div class="mui-input-row">
+			<div class="mui-row">
+				<div class="mui-radio mui-col-xs-4 gz_sx" >
+					<label>位数</label>
+				</div>
+				<div class="mui-radio mui-col-xs-4">
+					<label>7位</label>
+					<input name="ws" type="radio" value="7" ng-model="ws">
+				</div>
+				<div class="mui-radio mui-col-xs-4 ">
+					<label>8位</label>
+					<input name="ws" type="radio" value="8" ng-model="ws" checked>
+				</div>
+			</div>
+		</div>
+		<div class="mui-input-row">
+			<div class="mui-row">
+				<div class="mui-radio mui-col-xs-4 gz_sx">
+					<label>系数</label>
+				</div>
+				<div class="mui-radio mui-col-xs-4">
+					<label>1.33</label>
+					<input name="xs" type="radio" value="1.33" ng-model="xs">
+				</div>
+				<div class="mui-radio mui-col-xs-4">
+					<label>1</label>
+					<input name="xs" type="radio" value="1" ng-model="xs" checked>
+				</div>
+			</div>
+		</div>
+
+		<div class="mui-input-row mui-select mui-select-ltxh gz_sx">
+			<label ng-click ="ltChange()">轮胎型号</label>
+			
+			<select ng-model="ltVal" ng-show="!ltc"  ng-options="lt.xh for lt in lts"></select>
+			<input ng-model="ltVal.zj" name="zj" ng-show="ltc"  type="number"  class="mui-input-clear" placeholder="请输入轮胎直径" required/>
+
+		</div>
+	<div class="vinvalid" ng-messages="kForm.zj.$error" ng-show="ltc" ng-messages-multiple>
+		        <label ng-message="required">必须填写</label>
+		        <label ng-message="number">必须为数字</label>
+		</div>
+		<div class="mui-input-row mui-select mui-select-qsb gz_sx" >
+			<label ng-click = "sbChange = !sbChange">桥速比</label>
+			<select ng-model="sbVal" ng-show="!sbChange" ng-options="sb for sb in sbs"></select>
+			<input ng-model="sbVal" name="sbVal" type="number" ng-show="sbChange" class="mui-input-clear" placeholder="请输入桥速比" required />
+
+		</div>
+		<div class="vinvalid" ng-show="sbChange"  ng-messages="kForm.sbVal.$error" ng-messages-multiple>
+		        <label ng-message="required">必须填写</label>
+		        <label ng-message="number">必须为数字</label>
+		</div>
+		<div class="mui-button-row">
+		
+			<button class="mui-btn mui-btn-success" ng-disabled="kForm.$invalid"  ng-click="ck()">确认</button>&nbsp;&nbsp;
+			<button class="mui-btn mui-btn-warning" ng-click="cClear()">取消</button>
+		</div>
+	</form>
+
+	<ul class="mui-table-view">
+		<li class="mui-table-view-cell">
+			<label class="gz_title">计算结果：</label>
+
+		</li>
+		<li class="mui-table-view-cell gz_sx">
+			<label class="resultitle">K值：</label>
+			<label class="value" ng-bind="k"></label>
+			<!-- <button class="mui-btn">Button</button> -->
+		</li>
+		
+		<li class="mui-table-view-cell gz_sx">
+			<label class="resultitle">天行健：</label>
+			<label class="value" ng-bind="txj"></label>
+			<!-- <button class="mui-btn">Button</button> -->
+		</li>
+		<li class="mui-table-view-cell gz_sx">
+			<label class="resultitle">拨码：</label>
+			<label class="value" ng-bind="bmV1"></label>
+			<!-- <button class="mui-btn">Button</button> -->
+		</li>
+		<textarea id="sharecontent1" ng-bind="Kresult" rows="3" style="display:none"></textarea>
+		<li class="mui-table-view-cell" ng-show="k">
+			<div class="mui-button-row">
+				<button class="mui-btn mui-btn-success mui-btn-block" onclick="shareSystem('sharecontent1')">
+						<span class="mui-icon mui-icon-weixin"></span>
+						发送计算结果
+					</button>
+			</div>
+		</li>
+
+	</ul>
+</div>
+	<div id="tabbar-vin" class="mui-control-content"ng-controller="vinCtrl">
+		<form name="VINForm" novalidate class="mui-input-group" >
+			<div class="mui-input-row mui-input-row-vin gz_sx">
+				<label>前8位：</label>
+				<input ng-model="q" name="q" id="q8" type="text"  class="mui-input-clear" placeholder="请输入VIN前8位" required ng-minlength="8" ng-maxlength="8" ng-pattern="/^[0-9A-Z]{8}$/"/>	
+			
+			</div>
+			
+			<div class="vinvalid" ng-messages="VINForm.q.$error" ng-messages-multiple>
+		        <label ng-message="minlength">必须为8位</label>
+		        <label ng-message="maxlength">必须为8位</label>
+		        <label ng-message="pattern">必须为大写字母加数字组合</label>	
+			</div>
+			<div class="mui-input-row mui-input-row-vin gz_sx">
+				<label>流水号：</label>
+				<input ng-model="lsh" name="lsh" id="lshs" type="text" class="mui-input-clear" placeholder="请输入流水号" required ng-pattern="/^[A-Z]{2}\d{6}-[A-Z]{2}\d{6}$|^[A-Z]{2}\d{6}$/"/>		
+			</div>
+			<div class="vinvalid" ng-messages="VINForm.lsh.$error" >
+				<label  ng-message="pattern">请输入正确的流水号或者流水号区间</label>
+			</div>
+			
+			 
+				
+		
+			<div class="mui-button-row">
+				<button id="vinBtn" ng-disabled="VINForm.$invalid"  ng-click="ctt()" class="mui-btn mui-btn-success">计算</button>
+				&nbsp;&nbsp;
+				<button id="vinClr" ng-click="cVin()"  class="mui-btn mui-btn-warning">清除</button>
+			</div>
+		</form>
+		<textarea id="sharecontent" ng-bind="count[1]" rows="3" style="display:none"></textarea>
+
+		<ul class="mui-table-view" id="vincontent">
+			<li class="mui-table-view-cell">
+				<label class="input-title">计算结果:</label>
+			</li>
+			<li class="mui-table-view-cell" ng-repeat="rs in count[1]">
+				<label class="input-result">{{rs}}</label>
+			</li>
+			<li class="mui-table-view-cell" ng-show="count">
+				<div class="mui-button-row">
+
+					<button class="mui-btn mui-btn-success mui-btn-block" onclick="shareSystem('sharecontent')">
+						<span class="mui-icon mui-icon-weixin"></span>
+						发送计算结果
+					</button>
+				</div>
+			</li>
+
+		</ul>
+	
+		<div id="output" style="display:none">
+Share模块管理客户端的社交分享功能。
+		</div>
+	</div>
+</div>
+    <!--工具栏-->
+    <nav class="mui-bar mui-bar-tab">
+  <a class="mui-tab-item mui-active" href="#tabbar-index">
+		<span class="mui-icon">
+			<i class="iconfont icon-zhuye"></i>
+		</span>
+		<span class="mui-tab-label">主页</span>
+	</a>
+	<a class="mui-tab-item" href="#tabbar-gzhang">
+		<span class="mui-icon mui-icon-chat"></span>
+		<span class="mui-tab-label">故障码</span>
+	</a>
+	<a class="mui-tab-item" href="#tabbar-k">
+		<span class="mui-icon">
+			<i class="iconfont icon-jisuanqi1"></i>
+		</span>
+		<span class="mui-tab-label">k值</span>
+	</a>
+	<a class="mui-tab-item" href="#tabbar-vin">
+		<span class="mui-icon">
+			<i class="iconfont icon-tiaoxingma"></i>
+		</span>
+		<span class="mui-tab-label">VIN码</span>
+	</a>
+
+</nav>
+
+       
+    <script src="@/js/lib/jquery/jquery-1.11.0.js"></script>
+    <script src="@/js/lib/angular.js"></script>
+    <script src="@/js/lib/angular-messages.min.js"></script>
+    <script src="@/js/lib/vinjs.js"></script>
+    <script src="@/js/lib/bm.js"></script>
+    <script src="@/js/lib/data.js"></script>
+    <script src="@/js/lib/fjp.js"></script>
+
+     <script src="@/js/lib/common.js"></script>
+    <script src="@/js/app/list.js"></script>
+</body>
+</html>
