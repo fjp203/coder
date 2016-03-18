@@ -5,5 +5,5 @@
 1. 计算K值和拨码；  
 1. 计算车辆VIN码；
 #### 开发工具：Hbuilder  
-####语言：H5+，angularjs,mui,json
+#### 语言：H5+，angularjs,mui,json
 
